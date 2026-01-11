@@ -6,7 +6,7 @@
 using namespace std;
 void ShowMainMenu();
 const string ClientFile = "ClientsList.txt";
-enum enMainMenuOptions { ShowClient = 1, AddClient = 2, DeleteClient = 3, UpdateClient = 4, FindClient = 5, EmptyList, Exit = 7 };
+enum enMainMenuOptions { ShowClient = 1, AddClient = 2, DeleteClient = 3, UpdateClient = 4, FindClient = 5, EmptyList=6, Exit = 7 };
 struct stClients {
 	string AccountNumber;
 	string PinCode;
@@ -381,7 +381,7 @@ void GoBackToMainMenu() {
 }
 short ReadMainMenuOptions() {
 	short Choice = 0;
-	cout << "Choose what do you want to do? [1-6] ";
+	cout << "Choose what do you want to do? [1-7] ";
 	cin >> Choice;
 	return Choice;
 }
